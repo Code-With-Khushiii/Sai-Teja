@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Target, TrendingUp, Mail, Phone, Linkedin, Award, Users, Lightbulb, Rocket, ExternalLink, X } from 'lucide-react';
+import { ChevronDown, Target, TrendingUp, Mail, Phone, Menu, Linkedin, Award, Users, Lightbulb, Rocket, ExternalLink, X } from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isVisible, setIsVisible] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => {
     setIsVisible(true);
 
@@ -212,14 +212,20 @@ function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-brown/20">
         <div className="max-w-6xl mx-auto px-6 py-4">
+
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-display text-black tracking-wide">SAI TEJA VELURI</div>
+
+            {/* Logo */}
+            <div className="text-xl md:text-2xl font-display text-black tracking-wide">
+              SAI TEJA VELURI
+            </div>
+
+            {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
               {[
                 { id: 'hero', label: 'Home' },
                 { id: 'summary', label: 'Summary' },
                 { id: 'experience', label: 'Experience' },
-                { id: 'projects', label: 'Projects' },
                 { id: 'skills', label: 'Skills' },
                 { id: 'education', label: 'Education' },
                 { id: 'contact', label: 'Contact' }
@@ -227,15 +233,53 @@ function App() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                    activeSection === item.id ? 'text-black font-medium' : 'text-brown hover:text-black'
-                  }`}
+                  className={`text-sm font-light tracking-wide transition-colors duration-300 ${activeSection === item.id
+                    ? "text-black font-medium"
+                    : "text-brown hover:text-black"
+                    }`}
                 >
                   {item.label}
                 </button>
               ))}
             </div>
+
+            {/* Mobile Hamburger */}
+            <button
+              className="md:hidden text-black"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            </button>
+
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 flex flex-col space-y-4 border-t border-brown/20 pt-4">
+
+              {[
+                { id: 'hero', label: 'Home' },
+                { id: 'summary', label: 'Summary' },
+                { id: 'experience', label: 'Experience' },
+                { id: 'skills', label: 'Skills' },
+                { id: 'education', label: 'Education' },
+                { id: 'contact', label: 'Contact' }
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    scrollToSection(item.id)
+                    setMobileMenuOpen(false)
+                  }}
+                  className="text-left text-brown hover:text-black transition"
+                >
+                  {item.label}
+                </button>
+              ))}
+
+            </div>
+          )}
+
         </div>
       </nav>
 
@@ -245,7 +289,7 @@ function App() {
           <div className={`text-center transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
 
             <div className="mb-12">
-              <img 
+              <img
                 src="images/image.png"
                 alt="Sai Teja Veluri"
                 className="w-36 h-36 rounded-full mx-auto mb-6 object-cover border-4 border-brown/30 shadow-lg"
@@ -265,13 +309,13 @@ function App() {
               {summary}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button 
+              <button
                 onClick={() => scrollToSection('experience')}
                 className="bg-black text-white px-10 py-4 font-light tracking-wide hover:bg-brown transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 🚀 VIEW EXPERIENCE
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="border border-black text-black px-10 py-4 font-light tracking-wide hover:bg-black hover:text-white transition-all duration-300"
               >
@@ -293,7 +337,7 @@ function App() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <ChevronDown 
+            <ChevronDown
               className="w-6 h-6 text-brown/60 mx-auto animate-bounce cursor-pointer hover:text-black transition-colors"
               onClick={() => scrollToSection('summary')}
             />
@@ -389,7 +433,7 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-cream p-6 rounded-sm hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
                 onClick={() => setSelectedProject(index)}
@@ -419,7 +463,7 @@ function App() {
           <div className="text-center mt-12">
             <p className="text-brown font-light">
               Interested in detailed methodology or product documentation?
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="text-black ml-1 font-regular italic"
               >
@@ -438,7 +482,7 @@ function App() {
               <h2 className="text-2xl font-display text-black tracking-wide">
                 {projects[selectedProject].title}
               </h2>
-              <button 
+              <button
                 onClick={() => setSelectedProject(null)}
                 className="text-brown hover:text-black transition-colors"
               >
@@ -585,7 +629,7 @@ function App() {
           <div className="flex flex-col items-center space-y-8 max-w-md mx-auto">
             <div className="flex items-center">
               <Phone className="w-6 h-6 text-brown mr-6" />
-              <a 
+              <a
                 href="tel:+19296981277"
                 className="text-white/80 font-light hover:text-white transition-colors"
               >
@@ -594,7 +638,7 @@ function App() {
             </div>
             <div className="flex items-center">
               <Linkedin className="w-6 h-6 text-brown mr-6" />
-              <a 
+              <a
                 href="https://www.linkedin.com/in/saitejaveluri/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -605,7 +649,7 @@ function App() {
             </div>
             <div className="flex items-center">
               <Mail className="w-6 h-6 text-brown mr-6" />
-              <a 
+              <a
                 href="mailto:sv2862@stern.nyu.edu"
                 className="text-white/80 font-light hover:text-white transition-colors"
               >
