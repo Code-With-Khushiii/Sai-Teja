@@ -50,7 +50,9 @@ function App() {
         "Defined product vision and PRDs for a GenAI Accelerator, translating recruiter and operations discovery insights into measurable requirements aligned to a north star metric, delivering $13M in business value.",
         "Established KPI framework and experimentation cadence, defining adoption, cycle-time, SLA compliance, and cost guardrail metrics; implemented weekly metric reviews and post-launch analysis that validated 23% faster processing and 35% cost reduction.",
         "Prioritized 15+ enterprise AI use cases using structured scoring (RICE-style evaluation, feasibility, risk, ROI impact) to sequence MVP vs. Phase 2 roadmap investments, reducing recruiter overhead by 40% while aligning engineering capacity with highest-value outcomes."
-      ]
+      ],
+      highlightsLink: "https://drive.google.com/file/d/1OSWfjuPdVe-TPXCR1RD78UaQIXrSjb6N/view",
+      certificateLink: "https://drive.google.com/file/d/1FmRQMjwOmukZzLUq8730MkYSgibtxeiv/view"
     },
     {
       company: "Spim Innovations",
@@ -106,6 +108,31 @@ function App() {
       conclusion: "Successfully demonstrated end-to-end product management skills from vision to requirements documentation for an AI-powered enterprise solution."
     },
     {
+      title: "DS FINAL – Data Science Platform",
+      subtitle: "Data Science Product Case Study",
+      category: "Data Science Project",
+      introduction:
+        "Data Science platform presentation demonstrating analytics, product insights, and business decision modeling.",
+      problem:
+        "Organizations struggle to transform raw data into actionable product insights that support strategic decision-making.",
+      objective:
+        "Build a data science driven system that converts raw datasets into visual insights and predictive analytics.",
+      methodology: [
+        "Collected and processed structured datasets.",
+        "Applied statistical analysis and visualization techniques.",
+        "Built dashboards to interpret patterns and trends.",
+        "Developed insights to support business decision making."
+      ],
+      results: [
+        "Generated actionable insights from data analysis.",
+        "Demonstrated practical data science workflow.",
+        "Presented analytics through a product-focused approach."
+      ],
+      conclusion:
+        "The project demonstrates the integration of data science techniques with product thinking to generate valuable business insights.",
+      link: "https://drive.google.com/file/d/1ZSCh9qU2NNUbuHnmkvnP5xEeFVjQot09/view"
+    },
+    {
       title: "CarExp - Gamified Onboarding",
       subtitle: "NYU Product Strategy Project",
       category: "Product Strategy",
@@ -123,7 +150,8 @@ function App() {
         "Established clear metrics framework for success measurement.",
         "Developed viable monetization strategy."
       ],
-      conclusion: "Demonstrated expertise in product strategy, market analysis, and business model development for consumer-facing applications."
+      conclusion: "Demonstrated expertise in product strategy, market analysis, and business model development for consumer-facing applications.",
+      link: "https://drive.google.com/file/d/1RVhSoUjai1VkC77Ga04F29NZJ1Q8YZAE/view"
     },
     {
       title: "Strategic Risk & Resource Modeling",
@@ -164,6 +192,7 @@ function App() {
         "Successfully delivered complex engineering program."
       ],
       conclusion: "Demonstrated program management expertise at scale, coordinating large teams toward complex technical deliverables."
+
     }
   ];
 
@@ -206,6 +235,14 @@ function App() {
       details: "Relevant Coursework: Neural Networks, Data Structures & Algorithms, Java, Linear Integrated Circuits, Network Analysis"
     }
   ];
+  const certifications = [
+    {
+    title: "Product Management Certification",
+    platform: "Udemy",
+    description: "Completed professional certification in Product Management covering product strategy, roadmaps, and product lifecycle.",
+    link: "https://drive.google.com/file/d/1FmRQMjwOmukZzLUq8730MkYSgibtxeiv/view"
+    }
+    ];
 
   return (
     <div className="min-h-screen bg-cream">
@@ -226,8 +263,10 @@ function App() {
                 { id: 'hero', label: 'Home' },
                 { id: 'summary', label: 'Summary' },
                 { id: 'experience', label: 'Experience' },
+                { id: 'projects', label: 'Projects' },
                 { id: 'skills', label: 'Skills' },
                 { id: 'education', label: 'Education' },
+                { id: 'certifications', label: 'Certificate' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
                 <button
@@ -261,8 +300,10 @@ function App() {
                 { id: 'hero', label: 'Home' },
                 { id: 'summary', label: 'Summary' },
                 { id: 'experience', label: 'Experience' },
+                { id: 'projects', label: 'Projects' },
                 { id: 'skills', label: 'Skills' },
                 { id: 'education', label: 'Education' },
+                { id: 'certifications', label: 'Certificate' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
                 <button
@@ -414,6 +455,23 @@ function App() {
                     </li>
                   ))}
                 </ul>
+                {role.highlightsLink && (
+                  <div className="mt-4 flex items-center text-brown hover:text-black transition-colors hover:underline">
+                    <span className="text-sm font-light">View Highlights</span>
+                    <a href={role.highlightsLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 ml-2 inline-block" />
+                    </a>
+                  </div>
+                )}
+
+                {role.certificateLink && (
+                  <div className="mt-2 flex items-center text-brown hover:text-black transition-colors hover:underline">
+                    <span className="text-sm font-light">View Certificate</span>
+                    <a href={role.certificateLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 ml-2 inline-block" />
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -452,10 +510,7 @@ function App() {
                 <p className="text-brown leading-relaxed font-light text-sm line-clamp-3">
                   {project.introduction}
                 </p>
-                <div className="mt-4 flex items-center text-brown hover:text-black transition-colors">
-                  <span className="text-sm font-light">View Details</span>
-                  <ExternalLink className="w-4 h-4 ml-2" />
-                </div>
+                
               </div>
             ))}
           </div>
@@ -551,6 +606,17 @@ function App() {
                   {projects[selectedProject].conclusion}
                 </p>
               </div>
+              {projects[selectedProject].link && (
+                <div>
+                  <h3 className="text-lg font-display text-black mb-3 tracking-wide">LINK</h3>
+                  <a
+                    onClick={() => window.open(projects[selectedProject].link, '_blank')}
+                    className="text-brown leading-relaxed font-light hover:text-black transition-colors hover:underline"
+                  >
+                  View Project  <ExternalLink className="w-4 h-4 ml-2 inline-block" />
+                </a>
+              </div>
+              )}
             </div>
           </div>
         </div>
@@ -615,6 +681,27 @@ function App() {
         </div>
       </section>
 
+      {/* Certifications Section */}
+      <section id="certifications" className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-display text-black mb-6 tracking-wide">CERTIFICATIONS</h2>
+            <div className="w-16 h-0.5 bg-brown mx-auto mb-6"></div>
+          </div>
+          <div className="space-y-8">
+            {certifications.map((cert, index) => (
+              <div key={index} className="bg-cream p-8 rounded-sm shadow-sm border border-brown/10">
+                <h3 className="text-2xl font-display text-black tracking-wide">{cert.title}</h3>
+                <p className="text-brown font-medium">{cert.platform}</p>
+                <p className="text-brown leading-relaxed font-light">{cert.description}</p>
+                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-brown leading-relaxed font-light hover:text-black transition-colors hover:underline">
+                  View Certificate <ExternalLink className="w-4 h-4 ml-2 inline-block" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-black text-white">
         <div className="max-w-6xl mx-auto px-6">
