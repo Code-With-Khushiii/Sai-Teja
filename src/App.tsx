@@ -51,7 +51,7 @@ function App() {
         "Established KPI framework and experimentation cadence, defining adoption, cycle-time, SLA compliance, and cost guardrail metrics; implemented weekly metric reviews and post-launch analysis that validated 23% faster processing and 35% cost reduction.",
         "Prioritized 15+ enterprise AI use cases using structured scoring (RICE-style evaluation, feasibility, risk, ROI impact) to sequence MVP vs. Phase 2 roadmap investments, reducing recruiter overhead by 40% while aligning engineering capacity with highest-value outcomes."
       ],
-      highlightsLink: "https://drive.google.com/file/d/1OSWfjuPdVe-TPXCR1RD78UaQIXrSjb6N/view",
+      highlightsLink: "https://drive.google.com/file/d/1KyW_-tGGD-sRE2lR15kD1yBiILKHc6HL/view?usp=sharing ",
       certificateLink: "https://drive.google.com/file/d/1OSWfjuPdVe-TPXCR1RD78UaQIXrSjb6N/view"
     },
     {
