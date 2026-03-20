@@ -109,28 +109,28 @@ function App() {
       link: "https://drive.google.com/file/d/1RVhSoUjai1VkC77Ga04F29NZJ1Q8YZAE/view?usp=sharing"
     },
     {
-      title: "Care Exp or Sandwich Generation Problem Statement",
+      title: "Design Strategy",
       subtitle: "Design Strategy Project",
       category: "Design Strategy",
       introduction:
-        "Design strategy project addressing the Care Exp or Sandwich Generation problem, exploring product insights and strategic decision modeling.",
+        "Design strategy project addressing the Sandwich Generation problem — adults aged 40–60 doing double duty caring for young and adult children as well as aging parents. The project explores product insights, user research, and strategic decision modeling to create solutions that help multigenerational caregivers survive and thrive.",
       problem:
-        "Organizations struggle to transform raw data into actionable product insights that support strategic decision-making.",
+        "53 million Americans provide unpaid care to family members, often balancing full-time jobs and caregiving responsibilities. This invisible labor leads to emotional burnout, financial stress from out-of-pocket expenses, career disruptions, and family tensions due to unshared caregiving load. Existing wellness apps don't offer tools for shared caregiving, mental health support, or recognition.",
       objective:
-        "Build a data-driven approach that converts insights into visual analytics and strategic recommendations.",
+        "Build a data-driven, user-centered approach that converts raw caregiving pain points into actionable product concepts, visual analytics, and strategic recommendations — bridging family life and workplace wellness in a $100B+ market.",
       methodology: [
-        "Collected and processed structured datasets.",
-        "Applied statistical analysis and visualization techniques.",
-        "Built dashboards to interpret patterns and trends.",
-        "Developed insights to support business decision making."
+        "Conducted primary user interviews with sandwich-generation caregivers to validate assumptions against real behaviors and preferences.",
+        "Applied design strategy frameworks: opportunity hypothesis generation, \"What We Thought vs. What We Learnt\" insight mapping, and cliché auditing.",
+        "Built product concepts (CareXP, Time Trader) with user journeys, flywheels, and How-to-Win strategies.",
+        "Developed TAM/SAM/SOM market sizing, financial projections, and Business Model Canvas for each opportunity area."
       ],
       results: [
-        "Generated actionable insights from data analysis.",
-        "Demonstrated practical design strategy workflow.",
-        "Presented analytics through a product-focused approach."
+        "Generated actionable product insights from primary research — community-driven emotional support preferred over clinical therapy; financial rewards appealing regardless of income level.",
+        "Demonstrated a practical design strategy workflow from problem framing through opportunity hypothesis, user journey mapping, flywheel design, and go-to-market strategy.",
+        "Presented two distinct product concepts with market analysis (CareXP: $60B TAM, Time Trader: $1B TAM), subscription pricing models, and 3-year financial projections."
       ],
       conclusion:
-        "The project demonstrates the integration of design strategy techniques with product thinking to generate valuable business insights.",
+        "The project demonstrates the integration of design strategy techniques with product thinking to generate valuable business insights — transforming the caregiving challenge into two viable platform concepts that address emotional burnout, family coordination, and workplace wellness for the sandwich generation.",
       link: "https://drive.google.com/file/d/1ZSCh9qU2NNUbuHnmkvnP5xEeFVjQot09/view?usp=sharing"
     },
     {
