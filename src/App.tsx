@@ -10,7 +10,7 @@ function App() {
     setIsVisible(true);
 
     const handleScroll = () => {
-      const sections = ['hero', 'summary', 'experience', 'projects', 'skills', 'education', 'contact'];
+      const sections = ['hero', 'summary', 'experience', 'projects', 'skills', 'education', ...(papers.length > 0 ? ['papers'] : []), 'certifications', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -52,7 +52,7 @@ function App() {
         "Prioritized 15+ enterprise AI use cases using structured scoring (RICE-style evaluation, feasibility, risk, ROI impact) to sequence MVP vs. Phase 2 roadmap investments, reducing recruiter overhead by 40% while aligning engineering capacity with highest-value outcomes."
       ],
       highlightsLink: "https://drive.google.com/file/d/1OSWfjuPdVe-TPXCR1RD78UaQIXrSjb6N/view",
-      certificateLink: "https://drive.google.com/file/d/1FmRQMjwOmukZzLUq8730MkYSgibtxeiv/view"
+      certificateLink: "https://drive.google.com/file/d/1OSWfjuPdVe-TPXCR1RD78UaQIXrSjb6N/view"
     },
     {
       company: "Spim Innovations",
@@ -89,69 +89,49 @@ function App() {
   const projects = [
     {
       title: "AI Interview Intelligence Platform",
-      subtitle: "NYU Capstone Project",
+      subtitle: "NYU Capstone Project · Go to Market Strategy for AI Recruitment Tool",
       category: "GenAI Product",
-      introduction: "Developed a comprehensive product strategy for an AI-powered interview intelligence platform, conducting extensive market research and competitive analysis to identify unique value propositions.",
-      problem: "Traditional interview processes lack data-driven insights and consistency, leading to suboptimal hiring decisions and candidate experiences.",
-      objective: "Create an AI-powered platform that provides real-time interview intelligence, feedback, and analytics to improve hiring outcomes.",
+      introduction: "Developed a comprehensive Go-to-Market strategy for an AI-powered recruitment and interview intelligence platform. Conducted extensive market research, competitive analysis, and customer discovery to define market entry strategy, positioning, and launch roadmap for enterprise AI recruitment solutions.",
+      problem: "Traditional interview and recruitment processes lack data-driven insights and consistency, leading to suboptimal hiring decisions and candidate experiences. AI recruitment tools face adoption barriers and unclear go-to-market positioning.",
+      objective: "Create a defensible Go-to-Market strategy for an AI recruitment platform that enables successful market entry, clear value proposition, and scalable adoption across enterprises.",
       methodology: [
-        "Authored the product vision and comprehensive PRD.",
+        "Authored product vision and Go-to-Market strategy document.",
         "Benchmarked 40+ competitors to identify market gaps and opportunities.",
-        "Translated market insights into prioritized MVP requirements.",
-        "Defined technical architecture and integration requirements."
+        "Defined target segments, positioning, and pricing strategy.",
+        "Developed phased launch roadmap and success metrics."
       ],
       results: [
-        "Identified key market differentiators through competitive analysis.",
-        "Established clear MVP scope and phased roadmap.",
-        "Created actionable PRD with technical specifications."
+        "Identified key market differentiators and positioning strategy.",
+        "Established clear market entry plan and phased roadmap.",
+        "Created actionable GTM playbook with technical and commercial specifications."
       ],
-      conclusion: "Successfully demonstrated end-to-end product management skills from vision to requirements documentation for an AI-powered enterprise solution."
+      conclusion: "Successfully demonstrated end-to-end product management skills from market research to Go-to-Market strategy for an AI-powered enterprise recruitment solution.",
+      link: "https://drive.google.com/file/d/1RVhSoUjai1VkC77Ga04F29NZJ1Q8YZAE/view?usp=sharing"
     },
     {
-      title: "DS FINAL – Data Science Platform",
-      subtitle: "Data Science Product Case Study",
-      category: "Data Science Project",
+      title: "Design Strategy",
+      subtitle: "Design Strategy Project",
+      category: "Design Strategy",
       introduction:
-        "Data Science platform presentation demonstrating analytics, product insights, and business decision modeling.",
+        "Design strategy project addressing the Sandwich Generation problem — adults aged 40–60 doing double duty caring for young and adult children as well as aging parents. The project explores product insights, user research, and strategic decision modeling to create solutions that help multigenerational caregivers survive and thrive.",
       problem:
-        "Organizations struggle to transform raw data into actionable product insights that support strategic decision-making.",
+        "53 million Americans provide unpaid care to family members, often balancing full-time jobs and caregiving responsibilities. This invisible labor leads to emotional burnout, financial stress from out-of-pocket expenses, career disruptions, and family tensions due to unshared caregiving load. Existing wellness apps don't offer tools for shared caregiving, mental health support, or recognition.",
       objective:
-        "Build a data science driven system that converts raw datasets into visual insights and predictive analytics.",
+        "Build a data-driven, user-centered approach that converts raw caregiving pain points into actionable product concepts, visual analytics, and strategic recommendations — bridging family life and workplace wellness in a $100B+ market.",
       methodology: [
-        "Collected and processed structured datasets.",
-        "Applied statistical analysis and visualization techniques.",
-        "Built dashboards to interpret patterns and trends.",
-        "Developed insights to support business decision making."
+        "Conducted primary user interviews with sandwich-generation caregivers to validate assumptions against real behaviors and preferences.",
+        "Applied design strategy frameworks: opportunity hypothesis generation, \"What We Thought vs. What We Learnt\" insight mapping, and cliché auditing.",
+        "Built product concepts (CareXP, Time Trader) with user journeys, flywheels, and How-to-Win strategies.",
+        "Developed TAM/SAM/SOM market sizing, financial projections, and Business Model Canvas for each opportunity area."
       ],
       results: [
-        "Generated actionable insights from data analysis.",
-        "Demonstrated practical data science workflow.",
-        "Presented analytics through a product-focused approach."
+        "Generated actionable product insights from primary research — community-driven emotional support preferred over clinical therapy; financial rewards appealing regardless of income level.",
+        "Demonstrated a practical design strategy workflow from problem framing through opportunity hypothesis, user journey mapping, flywheel design, and go-to-market strategy.",
+        "Presented two distinct product concepts with market analysis (CareXP: $60B TAM, Time Trader: $1B TAM), subscription pricing models, and 3-year financial projections."
       ],
       conclusion:
-        "The project demonstrates the integration of data science techniques with product thinking to generate valuable business insights.",
-      link: "https://drive.google.com/file/d/1ZSCh9qU2NNUbuHnmkvnP5xEeFVjQot09/view"
-    },
-    {
-      title: "CarExp - Gamified Onboarding",
-      subtitle: "NYU Product Strategy Project",
-      category: "Product Strategy",
-      introduction: "Built comprehensive product strategy for a gamified automotive onboarding platform, including market sizing, metrics framework, and monetization planning.",
-      problem: "Automotive onboarding experiences are often tedious and fail to engage users effectively, resulting in high drop-off rates.",
-      objective: "Design a gamified onboarding experience that increases user engagement and completion rates while building a sustainable business model.",
-      methodology: [
-        "Conducted TAM/SAM/SOM market sizing analysis.",
-        "Defined north star metric and comprehensive KPI framework.",
-        "Developed monetization plan and pricing strategy.",
-        "Created financial projections and unit economics model."
-      ],
-      results: [
-        "Projected $40M ARR potential based on market analysis.",
-        "Established clear metrics framework for success measurement.",
-        "Developed viable monetization strategy."
-      ],
-      conclusion: "Demonstrated expertise in product strategy, market analysis, and business model development for consumer-facing applications.",
-      link: "https://drive.google.com/file/d/1RVhSoUjai1VkC77Ga04F29NZJ1Q8YZAE/view"
+        "The project demonstrates the integration of design strategy techniques with product thinking to generate valuable business insights — transforming the caregiving challenge into two viable platform concepts that address emotional burnout, family coordination, and workplace wellness for the sandwich generation.",
+      link: "https://drive.google.com/file/d/1ZSCh9qU2NNUbuHnmkvnP5xEeFVjQot09/view?usp=sharing"
     },
     {
       title: "Strategic Risk & Resource Modeling",
@@ -235,6 +215,11 @@ function App() {
       details: "Relevant Coursework: Neural Networks, Data Structures & Algorithms, Java, Linear Integrated Circuits, Network Analysis"
     }
   ];
+  const papers = [
+    // Add your published papers below. Example format:
+    // { title: "Paper Title", publication: "Journal/Conference Name", year: "2024", link: "https://..." },
+  ];
+
   const certifications = [
     {
     title: "Product Management Certification",
@@ -245,7 +230,7 @@ function App() {
     ];
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-cream overflow-x-auto">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-brown/20">
         <div className="max-w-6xl mx-auto px-6 py-4">
@@ -266,6 +251,7 @@ function App() {
                 { id: 'projects', label: 'Projects' },
                 { id: 'skills', label: 'Skills' },
                 { id: 'education', label: 'Education' },
+                ...(papers.length > 0 ? [{ id: 'papers', label: 'Papers' }] : []),
                 { id: 'certifications', label: 'Certificate' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
@@ -303,6 +289,7 @@ function App() {
                 { id: 'projects', label: 'Projects' },
                 { id: 'skills', label: 'Skills' },
                 { id: 'education', label: 'Education' },
+                ...(papers.length > 0 ? [{ id: 'papers', label: 'Papers' }] : []),
                 { id: 'certifications', label: 'Certificate' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
@@ -608,14 +595,19 @@ function App() {
               </div>
               {projects[selectedProject].link && (
                 <div>
-                  <h3 className="text-lg font-display text-black mb-3 tracking-wide">LINK</h3>
+                  <h3 className="text-lg font-display text-black mb-3 tracking-wide">
+                    {projects[selectedProject].subtitle?.includes('Capstone') ? 'PRESENTATION DECK (PDF)' : 'LINK'}
+                  </h3>
                   <a
-                    onClick={() => window.open(projects[selectedProject].link, '_blank')}
-                    className="text-brown leading-relaxed font-light hover:text-black transition-colors hover:underline"
+                    href={projects[selectedProject].link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brown leading-relaxed font-light hover:text-black transition-colors hover:underline inline-flex items-center"
                   >
-                  View Project  <ExternalLink className="w-4 h-4 ml-2 inline-block" />
-                </a>
-              </div>
+                    {projects[selectedProject].subtitle?.includes('Capstone') ? 'View Presentation Deck (PDF)' : 'View Project'}
+                    <ExternalLink className="w-4 h-4 ml-2 inline-block" />
+                  </a>
+                </div>
               )}
             </div>
           </div>
@@ -680,6 +672,37 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Papers Published Section */}
+      {papers.length > 0 && (
+      <section id="papers" className="py-24 bg-cream">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-display text-black mb-6 tracking-wide">PAPERS PUBLISHED</h2>
+            <div className="w-16 h-0.5 bg-brown mx-auto mb-6"></div>
+            <p className="text-lg text-brown max-w-2xl mx-auto font-light">
+              Research and publications in product management, AI, and technology.
+            </p>
+          </div>
+          <div className="space-y-8">
+            {papers.map((paper, index) => (
+              <div key={index} className="bg-white p-8 rounded-sm shadow-sm border border-brown/10">
+                <h3 className="text-xl font-display text-black tracking-wide mb-2">{paper.title}</h3>
+                <p className="text-brown font-medium mb-2">{paper.publication} · {paper.year}</p>
+                <a
+                  href={paper.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brown font-light hover:text-black transition-colors hover:underline inline-flex items-center"
+                >
+                  View Paper <ExternalLink className="w-4 h-4 ml-2 inline-block" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      )}
 
       {/* Certifications Section */}
       <section id="certifications" className="py-24 bg-white">
