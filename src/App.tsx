@@ -252,7 +252,7 @@ function App() {
                 { id: 'skills', label: 'Skills' },
                 { id: 'education', label: 'Education' },
                 ...(papers.length > 0 ? [{ id: 'papers', label: 'Papers' }] : []),
-                { id: 'certifications', label: 'Certificate' },
+                { id: 'certifications', label: 'Certifications' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
                 <button
@@ -290,7 +290,7 @@ function App() {
                 { id: 'skills', label: 'Skills' },
                 { id: 'education', label: 'Education' },
                 ...(papers.length > 0 ? [{ id: 'papers', label: 'Papers' }] : []),
-                { id: 'certifications', label: 'Certificate' },
+                { id: 'certifications', label: 'Certifications' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
                 <button
