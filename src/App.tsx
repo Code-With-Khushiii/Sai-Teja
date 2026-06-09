@@ -238,12 +238,12 @@ function App() {
           <div className="flex items-center justify-between">
 
             {/* Logo */}
-            <div className="flex-1 min-w-0 pr-4 text-lg sm:text-xl md:text-2xl font-display text-black tracking-wide leading-tight truncate">
+            <div className="flex-1 md:flex-none min-w-0 pr-4 md:pr-0 text-lg sm:text-xl md:text-2xl font-display text-black tracking-wide leading-tight truncate">
               SAI TEJA VELURI
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center justify-end gap-5 lg:gap-8 flex-shrink-0">
               {[
                 { id: 'hero', label: 'Home' },
                 { id: 'summary', label: 'Summary' },
