@@ -204,7 +204,7 @@ function App() {
       school: "New York University",
       degree: "M.S., Management of Technology",
       location: "New York, NY",
-      dates: "Expected 2026",
+      dates: "Graduated 2026",
       details: "Relevant Coursework: Decision Model Analytics, Statistics for Data Analytics, Financial Analysis for Tech Managers, Operations Management"
     },
     {
@@ -228,11 +228,14 @@ function App() {
       link: "https://drive.google.com/file/d/1FmRQMjwOmukZzLUq8730MkYSgibtxeiv/view"
     },
     {
-      title: "Black Belt Certification",
+      title: "Lean Six Sigma Black Belt Certification",
       platform: "Certified",
       description: "Achieved Black Belt certification demonstrating advanced proficiency and mastery in the discipline.",
       link: "/black%20belt%20certificate.pdf"
     }
+
+
+
   ];
 
   return (
