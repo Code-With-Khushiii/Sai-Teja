@@ -231,7 +231,7 @@ function App() {
       title: "Black Belt Certification",
       platform: "Certified",
       description: "Achieved Black Belt certification demonstrating advanced proficiency and mastery in the discipline.",
-      image: "public/black belt certificate.pdf"
+      link: "/black%20belt%20certificate.pdf"
     }
   ];
 
@@ -718,19 +718,9 @@ function App() {
                 <h3 className="text-2xl font-display text-black tracking-wide">{cert.title}</h3>
                 <p className="text-brown font-medium">{cert.platform}</p>
                 <p className="text-brown leading-relaxed font-light">{cert.description}</p>
-                {cert.link && (
-                  <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-brown leading-relaxed font-light hover:text-black transition-colors hover:underline">
-                    View Certificate <ExternalLink className="w-4 h-4 ml-2 inline-block" />
-                  </a>
-                )}
-                {cert.image && (
-                  <embed
-                    src={cert.image}
-                    type="application/pdf"
-                    className="mt-4 w-full max-h-[480px] rounded-sm border border-brown/10"
-                    title={cert.title}
-                  />
-                )}
+                <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-brown leading-relaxed font-light hover:text-black transition-colors hover:underline">
+                  View Certificate <ExternalLink className="w-4 h-4 ml-2 inline-block" />
+                </a>
               </div>
             ))}
           </div>
